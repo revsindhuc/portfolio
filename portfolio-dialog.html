@@ -1,0 +1,28 @@
+<md-dialog aria-label="Portfolio"  ng-cloak flex>
+  <form>
+    <!-- Full dialog content-->
+    <md-toolbar class="md-toolbar-tools dialog-header">
+        <h2>{{title}}</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+            <md-icon class="mdi mdi-window-close dialog-close-icon"></md-icon>
+        </md-button>
+    </md-toolbar>
+    <md-dialog-content flex > 
+      <div class="md-dialog-content" style="color:black;" flex layout="row">
+         <div layout="row" flex layout-padding layout-align="start stretch" class="md-whiteframe-8dp" > 
+             <div flex="66" >
+                 <img ng-src="{{detail.imageUrl}}" class="portfolio-dialog-image" />
+             </div>
+             <div flex="33" layout="column" layout-align="space-around stretch">
+                 <div class="portfolio-dialog-skill" ng-repeat="skill in detail.skills"><i class="fa fa-lg {{skill.icon}}"></i> <span ng-bind-html="skill.text">{{skill.text}}</span></div>
+                 <div>
+                     <h2>{{detail.heading}}</h2>
+                     <div>{{detail.description}}</div>
+                 </div>
+             </div> 
+         </div>    
+      </div>
+    </md-dialog-content>
+  </form>
+</md-dialog>

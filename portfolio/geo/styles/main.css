@@ -1,0 +1,100 @@
+#planb_header
+{
+    height: 50px;
+    line-height: 50px;
+    background-image: url("./images/multicolor.png");
+    background-position: bottom;
+    background-repeat: repeat-x;
+}
+
+#planb_header .main_logo
+{
+    height:100%;
+    font-family: 'Electrolize', sans-serif;
+    font-size: 34px;
+    color: #464644;
+}
+
+#planb_header .sub_logo
+{
+    height:100%;
+    padding-left: 20px;
+    font-family: 'Electrolize', sans-serif;
+    font-size: 24px;
+}
+
+#planb_body
+{
+    width: 100%;
+    margin:auto;
+    text-align: center;
+}
+
+#planb_body #planb_viz
+{
+    margin: 10px;
+}
+
+#planb_viz .planb_viz_box
+{
+    display: inline-table;
+    width: 30%;
+    margin: 20px;
+    border: 1px solid #BBBBBB;
+}
+
+.planb_viz_box .planb_viz_body
+{
+    height: 80%;
+}
+
+.planb_viz_box .planb_viz_label
+{
+    height:20%
+}
+
+
+
+.planb_viz_label .planb_viz_title
+{
+    font-weight: bolder;
+    font-family: 'Arial';
+    font-size: 14px;
+}
+
+.planb_viz_label .planb_viz_text
+{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: normal;
+    font-family: 'verdana';
+    font-size: 11px;
+}
+
+.planb_viz_box_maximized
+{
+    width: 96%;
+    height: 500px;
+}
+
+.planb_viz_box_close{
+    text-align: center;
+    width:100%;
+    display:none;
+    float:right;
+    width:32px;
+    height:32px;
+}
+
+#planb_footer
+{
+    height: 30px;
+    line-height: 30px;
+    padding-top: 8px;
+    border-top: solid 1px #777777;
+    text-align: center;
+    color: #777777;
+    font-family: 'verdana';
+    font-size: 8pt;
+}
+
