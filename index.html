@@ -44,10 +44,10 @@
                     <div class="col-md-5 about-me-left animated slideInLeft">
                             <h5>NAME</h5>
                             <h6>Revathy (call me SID)</h6>
-                            <h5>Expertise</h5>
+                            <h5>EXPERTISE</h5>
                             <h6>HTML, CSS, JS, Photoshop, Illustrator</h6>
-                            <h5>HOBBIES</h5>
-                            <h6>Art, Photos, Books</h6>
+                            <h5>INTERESTS</h5>
+                            <h6>Photography, Books, BasketBall</h6>
                     </div>
                     
                     <!-- About Me Page Top Content Center Image-->
@@ -119,19 +119,19 @@
                         <div class="row skills">
                             <div class="col-sm-6 col-md-3 text-center">
                                 <span class="chart" data-percent="80"><span class="percent">80</span></span>
-                                <h2 class="text-center">Web Design</h2>
+                                <h2 class="text-center textHel">Web Design</h2>
                             </div>
                             <div class="col-sm-6 col-md-3 text-center">
                                 <span class="chart" data-percent="80"><span class="percent">90</span></span>
-                                <h2 class="text-center">HTML / CSS</h2>
+                                <h2 class="text-center textHel">HTML / CSS</h2>
                             </div>
                             <div class="col-sm-6 col-md-3 text-center">
                                 <span class="chart" data-percent="90"><span class="percent">80</span></span>
-                                <h2 class="text-center">Graphic Design</h2>
+                                <h2 class="text-center textHel">Graphic Design</h2>
                             </div>
                             <div class="col-sm-6 col-md-3 text-center">
                                 <span class="chart" data-percent="70"><span class="percent">70</span></span>
-                                <h2 class="text-center">UI / UX</h2>
+                                <h2 class="text-center textHel">UI / UX</h2>
                             </div>
                         </div>
                         <!--End row -->
@@ -141,11 +141,11 @@
                             </div>
                             <div class="col-sm-6 col-md-3 text-center">
                                 <span class="chart" data-percent="50"><span class="percent">50</span></span>
-                                <h2 class="text-center">JavaScript</h2>
+                                <h2 class="text-center textHel">JavaScript</h2>
                             </div>
                             <div class="col-sm-6 col-md-3 text-center">
                                 <span class="chart" data-percent="40"><span class="percent">40</span></span>
-                                <h2 class="text-center">Web Development</h2>
+                                <h2 class="text-center textHel">Web Development</h2>
                             </div>
                             <div class="col-sm-6 col-md-3 text-center">
                                 <!-- left empty -->
@@ -197,7 +197,7 @@
                     <!-- timeline and badge -->
                     <div class="col-md-2 experience-timeline-container">
                         <!-- do not repeat this line again -->
-                        <div class="experience-timeline" style="position: absolute;height: 460px;"></div>
+                        <div class="experience-timeline" style="position: absolute;height: 505px;"></div>
                         <div class="experience-timeline-badge">
                             <span class="fa fa-check fa-2x experience-timeline-badge-icon"></span>
                         </div>
@@ -295,13 +295,13 @@
                                 <div class="education-info-holder">
                                     <div class="education-info-date">May / 2008</div>
                                     <div class="education-info-institution">Avinashilingam University</div>
-                                    <div class="education-info-department">Computer Science</div>
+                                    <div class="education-info-department">Information Technology</div>
                                 </div>
                                 <div class="education-desc-holder">
                                     <h5>Bachelor of Engineering </h5>
                                     <p class="excerpt">Information Technology </p>
                                     <p class="excerpt">GPA: 3.1/4.0 </p>
-                                    <p class="excerpt-text">Courses include datastructures and algorithms, operating systems, computer theory, object
+                                    <p class="excerpt-text">Courses include data structures and algorithms, operating systems, computer theory, object
                                         oriented analysis and design, etc.</p>
                                 </div>
                             </div>
@@ -326,6 +326,37 @@
                 </div>
                 <div class="col-md-1 spacer"></div>
             </div>
+
+            <!-- Interests -->
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-md-3"></div>
+                <div class="col-md-1 interest_wrapper">
+                    <img src="img/img-1.png"/>
+                    <h5 class="interest_text">Books</h5>
+                </div>
+                <div class="col-md-1 interest_wrapper">
+                    <img src="img/img-2.png"/>
+                    <h5 class="interest_text">Photography</h5>
+                </div>
+                <div class="col-md-1 interest_wrapper">
+                    <img src="img/img-3.png"/>
+                    <h5 class="interest_text">Music</h5>
+                </div>
+                <div class="col-md-1 interest_wrapper">
+                    <img src="img/img-4.png"/>
+                    <h5 class="interest_text">Travel</h5>
+                </div>
+                <div class="col-md-1 interest_wrapper">
+                    <img src="img/img-5.png"/>
+                    <h5 class="interest_text">BasketBall</h5>
+                </div>
+                <div class="col-md-1 interest_wrapper">
+                    <img src="img/img-6.png"/>
+                    <h5 class="interest_text">Design</h5>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+
             <!-- Navigation To Next Page -->
             <div class="row navigationContainer nextPageNavContainer" >
                 <div class="icon nextPageLink" title="Next Page">
@@ -356,11 +387,11 @@
                 
                 <div class="row grid">
                     <div class="grid-item {{detail.categories}}" ng-repeat="detail in details"  >
-                        <figure class="thumbnail effect-milo" ng-click="showDialog($event, $index)">
+                        <figure class="thumbnail effect-honey" ng-click="showDialog($event, $index)">
                             <img ng-src="{{detail.thumbnailUrl}}" width="480" height="300"/>
                             <figcaption>
                                 <h2>{{detail.heading}}</h2>
-                                <p>{{detail.shortDescription}}</p>
+                                <!--<p>{{detail.shortDescription}}</p>-->
                             </figcaption>	
                         </figure>
                     </div>
@@ -385,53 +416,67 @@
                     <i class="fa fa-angle-double-up fa-lg"></i>
                 </div>
             </div>
-            <h1 class="row"><span><i class="fa fa-compass fa-2x"></i></span><strong>Get In Touch</strong> </h1>
+            <h1 class="row"><span><i class="fa fa-compass fa-2x"></i></span><strong>CONTACT</strong> </h1>
             <div class="row">
-                <div class="socialIconsContainer" layout-gt-xs="row" layout="row" layout-sm="row" layout-align="center center" layout-margin
-                layout-padding>
-                    <div>
-                        <a class="fa fa-lg fa-envelope" href="mailto:revsindhuc@gmail.com"></a>
-                    </div>
-                    <div>
-                        <a class="fa fa-lg fa-facebook" href="http://www.facebook.com" target="_blank"></a>
-                    </div>
-                    <div>
-                        <a class="fa fa-lg fa-google-plus" href="http://plus.google.com" target="_blank"></a>
-                    </div>
-                    <div>
-                        <a class="fa fa-lg fa-linkedin" href="http://www.linkedin.com" target="_blank"></a>
-                    </div>
-                </div>
                 <div class="row pt-page-1-content contactFormContainer" ng-controller="ContactMeController">
                     <form name="contactMeForm">
-                        <div layout-gt-xs="row">
-                            <md-input-container class="md-block" flex-gt-sm layout-margin >
-                                <label>Name</label>
-                                <input type="text" ng-model="newMessage.name" required  name="name"/>
-                                <div ng-messages="contactMeForm.name.$error">
-                                    <div ng-message="required">Your name is required.</div>
-                                </div>
-                            </md-input-container>
-                            <md-input-container class="md-block" flex-gt-sm layout-margin>
-                                <label>Email</label>
-                                <input type="email" required ng-model="newMessage.email" minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/"/>
-                                <div ng-messages="contactMeForm.email.$error" role="alert">
-                                    <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
-                                        Your email must be between 10 and 100 characters long and look like an e-mail address.
-                                    </div>
-                                </div>
-                            </md-input-container>
+                        <!--<div layout-gt-xs="row">-->
+                            <!--<md-input-container class="md-block" flex-gt-sm layout-margin >-->
+                                <!--<label class="md-text">Name</label>-->
+                                <!--<input type="text" ng-model="newMessage.name" required  name="name"/>-->
+                                <!--<div ng-messages="contactMeForm.name.$error">-->
+                                    <!--<div class="md-text" ng-message="required">Your name is required.</div>-->
+                                <!--</div>-->
+                            <!--</md-input-container>-->
+                            <!--<md-input-container class="md-block" flex-gt-sm layout-margin>-->
+                                <!--<label class="md-text">Email</label>-->
+                                <!--<input type="email" required ng-model="newMessage.email" minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/"/>-->
+                                <!--<div ng-messages="contactMeForm.email.$error" role="alert">-->
+                                    <!--<div class="md-text" ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">-->
+                                        <!--Your email must be between 10 and 100 characters long and look like an e-mail address.-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</md-input-container>-->
+                        <!--</div>-->
+                        <!--<md-input-container class="md-block" layout-margin>-->
+                            <!--<label class="md-text">Message</label>-->
+                            <!--<textarea columns="1" rows="5" ng-model="newMessage.message" required></textarea>-->
+                            <!--<div ng-messages="contactMeForm.message.$error">-->
+                                <!--<div class="md-text" ng-message="required">A message is required.</div>-->
+                            <!--</div>-->
+                        <!--</md-input-container>-->
+                        <!--<section class="contactFormButtonsRow" layout="row" layout-sm="column" layout-align="center center">-->
+                            <!--<md-button class="md-raised md-primary" ng-click="addMessage()" ng-disabled="contactMeForm.$invalid">Send Message</md-button>-->
+                        <!--</section>-->
+                        <style>
+                            .form-control {
+                                background-color: rgba(255,255,255,0.4);
+                            }
+
+                            .form-row {
+                                margin-top: 20px;
+                            }
+
+                        </style>
+
+                        <div class="row form-row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-4 form-group-lg"><input type="text" class="form-control input-lg" id="name" placeholder="Name" /></div>
+                            <div class="col-md-4 form-group-lg"><input type="email" class="form-control input-lg" id="emailAddress" placeholder="Email" /></div>
+                            <div class="col-md-2"></div>
                         </div>
-                        <md-input-container class="md-block" layout-margin>
-                            <label>Message</label>
-                            <textarea columns="1" rows="5" ng-model="newMessage.message" required></textarea>
-                            <div ng-messages="contactMeForm.message.$error">
-                                <div ng-message="required">A message is required.</div>
-                            </div>
-                        </md-input-container>
-                        <section class="contactFormButtonsRow" layout="row" layout-sm="column" layout-align="center center">
-                            <md-button class="md-raised md-primary" ng-click="addMessage()" ng-disabled="contactMeForm.$invalid">Send Message</md-button>
-                        </section>
+                        <div class="row form-row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8 form-group-lg"><textarea class="form-control" rows="4" placeholder="Message" ></textarea></div>
+                            <div class="col-md-2"></div>
+                        </div>
+
+                        <div class="row form-row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8 form-group-lg"></div>
+                            <div class="col-md-2"></div>
+                        </div>
+
                     </form>
                 </div>
             </div>
@@ -445,6 +490,22 @@
                     <i class="fa fa-angle-double-down fa-lg"></i>
                 </div>
             </div>
+
+            <div class="socialIconsContainer" layout-gt-xs="row" layout="row" layout-sm="row" layout-align="center center" layout-margin layout-padding>
+                <div>
+                    <a class="fa fa-lg fa-envelope" href="mailto:revsindhuc@gmail.com"></a>
+                </div>
+                <div>
+                    <a class="fa fa-lg fa-facebook" href="http://www.facebook.com" target="_blank"></a>
+                </div>
+                <div>
+                    <a class="fa fa-lg fa-google-plus" href="http://plus.google.com" target="_blank"></a>
+                </div>
+                <div>
+                    <a class="fa fa-lg fa-linkedin" href="http://www.linkedin.com" target="_blank"></a>
+                </div>
+            </div>
+
         </div>
         <!-- *********************************** -->
         <!-- End: Contact Me Page -->

@@ -131,12 +131,12 @@ $(document).ready( function(){
 
 var portfolioDetails = [{
       thumbnailUrl: 'img/portfolio_1.png',
-      imageUrl: 'img/portfolio_1.png',
+      imageUrl: 'img/portfolio_1L.png',
       shortDescription: 'Responsive, scalable animal vector icons for the web',
-      categories: 'graphic-design web-graphics',
+      categories: 'web-graphics',
       skills: [{
             icon:'fa-archive',
-            text: 'Graphic Design, Web Icons'
+            text: 'Web Graphics, Web Icons'
           },
           {
             icon:'fa-check',
@@ -147,13 +147,13 @@ var portfolioDetails = [{
             text: 'Adobe Illustrator' 
           }],
       heading: 'Animal Web Icons',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi ducimus eum, vel sequi sunt harum perspiciatis. Asperiores enim praesentium similique, adipisci modi illo eos magnam nisi, pariatur atque perspiciatis cum? '
+      description: ' Created six different animal portraits from one and the same circle! Made a set of trendy flat elements using basic shapes, the shape builder tool, the pathfinder panel and some other useful functions of Adobe Illustrator. '
   },
   {
       thumbnailUrl: 'img/portfolio_2.png',
-      imageUrl: 'img/portfolio_2.png',
-      shortDescription: 'Responsive, scalable animal vector icons for the web',
-      categories: 'graphic-design web-graphics web-design',
+      imageUrl: 'img/portfolio_2L.png',
+      shortDescription: 'Web Animation using only CSS3',
+      categories: 'web-design',
       skills: [{
             icon:'fa-archive',
             text: 'Web Design, Animation'
@@ -170,17 +170,17 @@ var portfolioDetails = [{
             icon:'fa-link',
             text: '<a href="portfolio/cssanimation/index.html" target="_blank">Click here for demo</a>' 
           }],
-      heading: '100% CSS based ANIMATION',
+      heading: 'CSS based ANIMATION',
       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi ducimus eum, vel sequi sunt harum perspiciatis. Asperiores enim praesentium similique, adipisci modi illo eos magnam nisi, pariatur atque perspiciatis cum? '
   },
   {
       thumbnailUrl: 'img/portfolio_3.png',
-      shortDescription: 'Responsive, scalable animal vector icons for the web',
-      categories: 'graphic-design web-graphics',
-      imageUrl: 'img/portfolio_3.png',
+      shortDescription: 'Cute Furry Vector Monster using Illustrator',
+      categories: 'web-graphics',
+      imageUrl: 'img/portfolio_3L.png',
       skills: [{
             icon:'fa-archive',
-            text: 'Graphic Design, Web Icons'
+            text: 'Web Graphics'
           },
           {
             icon:'fa-check',
@@ -190,17 +190,17 @@ var portfolioDetails = [{
             icon:'fa-cog',
             text: 'Adobe Illustrator' 
           }],
-      heading: 'Animal Web Icons',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi ducimus eum, vel sequi sunt harum perspiciatis. Asperiores enim praesentium similique, adipisci modi illo eos magnam nisi, pariatur atque perspiciatis cum? '
+      heading: 'Furry Monster',
+      description: ' Started working with the basic shapes, then used a variety of gradients to add depth. Finally finished it off with some detailed fur effects to really lift the design from the screen. '
   },
   {
       thumbnailUrl: 'img/portfolio_4.png',
-      shortDescription: 'Responsive, scalable animal vector icons for the web',
-      categories: 'graphic-design web-graphics',
-      imageUrl: 'img/portfolio_4.png',
+      shortDescription: 'Cartoon Character',
+      categories: 'web-graphics',
+      imageUrl: 'img/portfolio_4L.png',
       skills: [{
             icon:'fa-archive',
-            text: 'Web Design, Animation'
+            text: 'Web Graphics'
           },
           {
             icon:'fa-check',
@@ -208,39 +208,39 @@ var portfolioDetails = [{
           },
           {
             icon:'fa-cog',
-            text: 'HTML5, CSS3, Adobe Illustrator' 
+            text: 'Adobe Illustrator'
           }],
-      heading: '100% CSS based ANIMATION',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi ducimus eum, vel sequi sunt harum perspiciatis. Asperiores enim praesentium similique, adipisci modi illo eos magnam nisi, pariatur atque perspiciatis cum? '
+      heading: 'Cartoon Character',
+      description: ' Using basic tools and effects along with the Blend Tool created the head and the ears of the character. Then did the hair with custom brushes and did the nose and a shadow using two simple blend and a bunch of Drop Shadow effects. Using the Appearance panel created the eyes and finally added the bow tie using the Pucker & Bloat and the Zig Zag effects. '
   },
   {
       thumbnailUrl: 'img/portfolio_5.png',
-      shortDescription: 'Responsive, scalable animal vector icons for the web',
-      categories: 'graphic-design web-graphics',
-      imageUrl: 'img/portfolio_5.png',
+      shortDescription: 'Dual Exposure Photo Effect in Photoshop',
+      categories: 'graphic-design',
+      imageUrl: 'img/portfolio_5L.png',
       skills: [{
             icon:'fa-archive',
-            text: 'Graphic Design, Web Icons'
+            text: 'Graphic Design'
           },
           {
             icon:'fa-check',
-            text: 'Vector Icons, Responsive, Scalable'             
+            text: 'Responsive, Scalable'
           },
           {
             icon:'fa-cog',
-            text: 'Adobe Illustrator' 
+            text: 'Adobe Photoshop'
           }],
-      heading: 'Animal Web Icons',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi ducimus eum, vel sequi sunt harum perspiciatis. Asperiores enim praesentium similique, adipisci modi illo eos magnam nisi, pariatur atque perspiciatis cum? '
+      heading: 'Dual Exposure Effect',
+      description: ' Used various text brushes and worked with shadows and midtones. Then adjusted the brush settings and painted some text. Finally created a layer mask and painted using various brushes. '
   },
   {
       thumbnailUrl: 'img/portfolio_6.png',
-      shortDescription: 'Responsive, scalable animal vector icons for the web',
-      categories: 'graphic-design web-graphics',
-      imageUrl: 'img/portfolio_6.png',
+      shortDescription: 'Wine Bottle Art using Photoshop',
+      categories: 'graphic-design',
+      imageUrl: 'img/portfolio_6L.png',
       skills: [{
             icon:'fa-archive',
-            text: 'Web Design, Animation'
+            text: 'Graphic Design'
           },
           {
             icon:'fa-check',
@@ -248,19 +248,19 @@ var portfolioDetails = [{
           },
           {
             icon:'fa-cog',
-            text: 'HTML5, CSS3, Adobe Illustrator' 
+            text: 'Adobe Photoshop'
           }],
-      heading: '100% CSS based ANIMATION',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi ducimus eum, vel sequi sunt harum perspiciatis. Asperiores enim praesentium similique, adipisci modi illo eos magnam nisi, pariatur atque perspiciatis cum? '
+      heading: 'Wine Bottle Art',
+      description: ' The Wine Bottle Art is one of my college project. Used various shadows, reflection and cutting techniques to make the bottle realistic and finally finished it off using photoshop. '
   },
   {
       thumbnailUrl: 'img/portfolio_7.png',
-      shortDescription: 'Responsive, scalable animal vector icons for the web',
-      categories: 'graphic-design web-graphics',
-      imageUrl: 'img/portfolio_7.png',
+      shortDescription: 'Draw Little Red Riding Hood with Basic Shapes in Illustrator',
+      categories: 'web-graphics',
+      imageUrl: 'img/portfolio_7L.png',
       skills: [{
             icon:'fa-archive',
-            text: 'Graphic Design, Web Icons'
+            text: 'Web Graphics, Web Icons'
           },
           {
             icon:'fa-check',
@@ -270,14 +270,14 @@ var portfolioDetails = [{
             icon:'fa-cog',
             text: 'Adobe Illustrator' 
           }],
-      heading: 'Animal Web Icons',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi ducimus eum, vel sequi sunt harum perspiciatis. Asperiores enim praesentium similique, adipisci modi illo eos magnam nisi, pariatur atque perspiciatis cum? '
+      heading: 'Red Riding Hood',
+      description: 'Created an adorable cartoon Little Red Riding Hood with her basket and bunch of flowers using the Pen Tool (P) and basic shapes such as the Rectangle Tool (M), the Ellipse Tool (L) and the Polygon Tool in Illustrator. '
   },
   {
       thumbnailUrl: 'img/portfolio_8.png',
-      shortDescription: 'Responsive, scalable animal vector icons for the web',
-      categories: 'graphic-design web-graphics web-design',
-      imageUrl: 'img/portfolio_8.png',
+      shortDescription: 'Web Based Visualization of Financial Transactions using d3js',
+      categories: 'web-design',
+      imageUrl: 'img/portfolio_8L.png',
       skills: [{
             icon:'fa-archive',
             text: 'Web Design, Animation'
@@ -294,7 +294,7 @@ var portfolioDetails = [{
             icon:'fa-link',
             text: '<a href="portfolio/geo/geoView.html" target="_blank">Click here for demo</a>' 
           }],
-      heading: '100% CSS based ANIMATION',
+      heading: 'Geographic Animation',
       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi ducimus eum, vel sequi sunt harum perspiciatis. Asperiores enim praesentium similique, adipisci modi illo eos magnam nisi, pariatur atque perspiciatis cum? '
   },
   

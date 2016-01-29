@@ -29,12 +29,13 @@ body {
 }
 
 a {
-	color: #ddd;
+	color: #fff;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #fff;
+	color: #CECBCB;
+    text-decoration: none;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -47,7 +48,7 @@ h1,h2,h3,h4,h5,h6 {
 .object-hidden { visibility:hidden; }
 
 .fa-2x {
-    font-size: 1.8em !important;
+    font-size: 1.5em !important;
 }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
@@ -138,30 +139,25 @@ html, body { height: 100%; }
 }
 
 .pt-page-2 {
-	/*background: #7bb7fa;*/
-    background: #a19690;
+	background: #aed0b6;
 }
 
 .pt-page-3 {
-	/*background: #60d7a9;*/
-    background: #badc8d;
+	background: #DFE2DB;
     
 }
 
 .pt-page-4 {
-	/*background: #fdc162;*/
-    background: #ef8e82;
+	background: #d4c1c1;
     
 }
 
 .pt-page-5 {
-	/*background: #fd6a62;*/
-    background: #aed0b6;
+    background: #ef8e82;
     
 }
 
 .pt-page-6 {
-	/*background: #f68dbb;*/
     background: #edcc8a;
 }
 
@@ -427,14 +423,17 @@ html, body { height: 100%; }
 }
 
 .about-me-left h5, .about-me-right h5 {
-    font: bold 20px/24px Raleway;
-    color: #3b323c;
+    color: black;
     margin-top: 32px;
     margin-bottom: 2px;
+    font-family: Helvetica;
+    font-size:24px;
+    font-weight:300;
 }
 
 .about-me-left h6, .about-me-right h6 {
-    font: normal 20px/24px Raleway;
+    font-family: Helvetica;
+    font-size:20px;
     color: #fff;
     margin-bottom: 0px;
 }
@@ -562,6 +561,9 @@ html, body { height: 100%; }
   line-height: 170px;
 	font-size:50px;
 	font-weight:300;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding-left: 10px;
+
   z-index: 2;
 }
 .percent:after {
@@ -572,9 +574,13 @@ html, body { height: 100%; }
 
 #skills .skills h2 {
     margin:0 0 30px;
-    color: #fff;
-    font-size:24px;
+    color: black;
+    font-size:28px;
     font-weight:300;
+}
+
+.textHel {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #experience {
@@ -592,7 +598,7 @@ html, body { height: 100%; }
 }
 .experience-timeline {
     width: 2px;
-    background-color: #ddd;
+    background-color: #B5B3B3;
     margin: auto;
     z-index: 1;
     position: abolute;
@@ -603,7 +609,7 @@ html, body { height: 100%; }
 .experience-timeline-badge {
     height: 48px;
     width: 48px;
-    background-color: #ddd;
+    background-color: #B5B3B3;
     border-radius: 24px;
     margin-left: auto;
     margin-right: auto;
@@ -620,7 +626,7 @@ html, body { height: 100%; }
     margin: auto;
     z-index: 3;
     position: relative;
-    top: 6px;
+    top: 11px;
 }
 .experience-panel-left,
 .experience-date-container-left {
@@ -669,7 +675,7 @@ html, body { height: 100%; }
     line-height: 20px;
     font-weight: bolder;
     text-transform: uppercase;
-    font: bolder 20px/24px Raleway;
+    font: bolder 20px/24px Helvetica;
     color: #3b323c;
 } 
 .experience-description h5 {
@@ -685,10 +691,10 @@ html, body { height: 100%; }
 .experience-description p {
     margin:0;
 	padding-top:5px;
-    font-family: Raleway;
+    font-family: Helvetica;
     font-size: 1em;
     line-height: 20px;
-    color: #fff;
+    color: #726873;
     display: block;
 } 
 
@@ -698,7 +704,7 @@ html, body { height: 100%; }
     border-radius: 15px;
     padding: 20px 28px;
     display: inline-block;
-    font: 18px/20px 'Montserrat', sans-serif;
+    font: 18px/20px 'Helvetica', sans-serif;
     color: #fff;
     text-transform: uppercase;
     background: #3b323c;
@@ -774,7 +780,7 @@ html, body { height: 100%; }
 	width:40px;
 	height:40px;
 	margin:4px;
-	background:#ef7674;
+	background:#8C7B7B;
 }
 .education_wrapper .education-item {
 	overflow:hidden;
@@ -789,7 +795,7 @@ html, body { height: 100%; }
 	overflow:hidden;
 	position:relative;
 	left:0;
-	background:#ef7674;
+	background:#8C7B7B;
 }
 .education_wrapper .education-info-holder {
 	padding:4%;
@@ -798,19 +804,22 @@ html, body { height: 100%; }
     min-height:200px;
 }
 .education_wrapper .education-info-holder .education-info-date {
-	font:18px/20px 'Montserrat', sans-serif;
+	font:18px/20px 'Helvetica', sans-serif;
 	text-transform:uppercase;
 	margin-bottom:20px;
 }
 .education_wrapper .education-info-holder .education-info-institution {
-	font-size:18px;
+	font-size:20px;
+    font-family:Helvetica;
 	line-height:20px;
 	font-weight:bold;
 	text-transform:uppercase;
 }
 .education_wrapper .education-info-holder .education-info-department {
-	font-size:14px;
+	font-size:16px;
+    font-family:Helvetica;
 	line-height:20px;
+    padding-top: 10px;
 }
 .education_wrapper .education-desc-holder {
 	-webkit-transition:all 800ms ease;
@@ -832,10 +841,10 @@ html, body { height: 100%; }
 	margin:0 0 20px;
 	text-transform:uppercase;
 }
-.education_wrapper .education-desc-holder h5 { color:#3b323c; font-weight: bold; }
-.education_wrapper .education-desc-holder h5:hover { color:#ef7674; }
-.education_wrapper .education-desc-holder .excerpt { margin:0; color:#ef7674;}
-.education_wrapper .education-desc-holder .excerpt-text { margin:0; padding-top: 5px; color:#666; font-size: smaller;}
+.education_wrapper .education-desc-holder h5 { color:#3b323c; font-weight: bold; font-family:Helvetica; font-size:18px;}
+.education_wrapper .education-desc-holder h5:hover { color:#8C7B7B;}
+.education_wrapper .education-desc-holder .excerpt { margin:0; color:#8C7B7B; font-family:Helvetica; font-weight:bold;}
+.education_wrapper .education-desc-holder .excerpt-text { margin:0; padding-top: 5px; color:#666; font-size: smaller; font-family:Helvetica;}
 .education_wrapper .education-desc-holder .btn { margin-top:20px; }
 .education_wrapper .education-left {
 	float:left;
@@ -886,6 +895,19 @@ html, body { height: 100%; }
 		width:auto;
 	}
 }
+
+.interest_wrapper{
+    color:#3b323c;
+    text-align: center;
+}
+
+.interest_text{
+    color:white;
+    font-weight: bold;
+    font-family:Helvetica;
+    font-size:18px;
+}
+
 /*********************************************/
 /* End: Education Page Styles */
 
@@ -896,7 +918,8 @@ html, body { height: 100%; }
 }
 
 .grid {width:100%;height:100%; margin:auto;overflow: hidden !important;display:block;  min-height:400px;}
-.grid-item { width: 25%; height:50%; overflow: hidden;}
+.grid-item { width: 25%; height:50%; overflow: hidden;
+}
 
 figure {
     display: block;
@@ -956,8 +979,8 @@ figure {
 	display:inline-block;
 	padding:3px;
 	margin:0 5px;
-	font:18px/20px 'Montserrat', sans-serif;
-	color:rgba(0,0,0,0.1);
+	font:18px/20px 'Helvetica', sans-serif;
+	color:#713737;
 	text-transform:uppercase;
 	border:none;
 	background:none;
@@ -997,7 +1020,77 @@ figure {
 }
 
 
-figure.effect-milo {
+/***** Honey *****/
+/*---------------*/
+
+figure.effect-honey {
+    background: #4a3753;
+}
+
+figure.effect-honey img {
+    opacity: 0.9;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+
+figure.effect-honey:hover img {
+    opacity: 0.5;
+}
+
+figure.effect-honey figcaption::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: #fff;
+    content: '';
+    -webkit-transform: translate3d(0,10px,0);
+    transform: translate3d(0,10px,0);
+}
+
+figure.effect-honey h2 {
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1em 1.5em;
+    width: 100%;
+    text-align: Center;
+    -webkit-transform: translate3d(0,-30px,0);
+    transform: translate3d(0,-30px,0);
+    font-family: Helvetica;
+    font-size: 26px;
+}
+
+figure.effect-honey h2 i {
+    font-style: normal;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0,-30px,0);
+    transform: translate3d(0,-30px,0);
+    font-family: Helvetica;
+    font-size: 26px;
+}
+
+figure.effect-honey figcaption::before,
+figure.effect-honey h2 {
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+}
+
+figure.effect-honey:hover figcaption::before,
+figure.effect-honey:hover h2,
+figure.effect-honey:hover h2 i {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+/*---------------*/
+
+/*figure.effect-milo {
 	background: #2e5d5a;
 }
 
@@ -1025,6 +1118,7 @@ figure.effect-milo h2 {
     font-size: 1.4em;
     font-weight: bold;
     color: chocolate;
+    display: none;
 }
 
 figure.effect-milo p {
@@ -1044,6 +1138,7 @@ figure.effect-milo p {
 
 figure.effect-milo:hover h2 {
     color: white;
+    display: inline;
 }
 
 figure.effect-milo:hover p {
@@ -1051,13 +1146,14 @@ figure.effect-milo:hover p {
     opacity: 1;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
-}
+}*/
 /*********************************************/
 /* End: Portfolio Page Styles */
 
 /*********************************************/
 /* Start: Contact Me Page Styles */
 .contactFormContainer {
+    margin-top: 15px;
     margin-left: 5em;
     margin-right: 5em;
     padding-left: 5em;
@@ -1082,8 +1178,10 @@ figure.effect-milo:hover p {
 .google-map-api {
     height: 14em;
     top: 0;
+    left: 0;
     position: relative;
     overflow: hidden;
+    margin-top:20px;
 }
 
 .google-map-api .map-title {
@@ -1129,7 +1227,7 @@ md-dialog, md-toolbar, .md-toolbar-tools {
     margin-left: -4px;
 }
 
-md-dialog-content {
+.md-dialog-content {
     color: black;
     overflow-x: hidden !important;
     overflow-y: auto !important;
@@ -1157,6 +1255,10 @@ md-dialog-content {
 
 .portfolio-dialog-skill a:hover {
     color: #333;
+}
+
+.md-text {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /*********************************************/
