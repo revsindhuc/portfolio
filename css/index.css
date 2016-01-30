@@ -1170,7 +1170,12 @@ figure.effect-milo:hover p {
 }
 
 .contact-icon {
-    color: #e38d13;
+    color: #78b6c9;
+    font-size: 1.5em;
+}
+
+.contact-icon:hover {
+    color: #28a4c9;
 }
 
 #map {
