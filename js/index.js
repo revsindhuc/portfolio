@@ -107,19 +107,22 @@ $(document).ready( function(){
                 $(".grid-item").height(gridItemHeight);
             
                 if(typeof(event) !== "undefined") {
+                    console.log("undefined here");
                     $(".grid").height(gridItemHeight*2);
                     $(".portfolio-content").height((gridItemHeight*2) + 10);
                 }
             }
             
             if($(".grid-item .thumbnail img").width() < $(".grid-item").width()) {
+                console.log("width here");
                 $(".grid-item .thumbnail img").width($(".grid-item").width());
             }
             $isotopeGrid.isotope('layout');
     }
-    onResize();
+    //onResize();
     $(window).resize(onResize);
-    
+    setTimeout(function(){onResize();}, 700);
+
     //Utility Functions
     function fullWidth(){
         return window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth||0;
@@ -127,6 +130,8 @@ $(document).ready( function(){
     function fullHeight(){
         return window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight||0;
     }
+
+
 });
 
 var portfolioDetails = [{
@@ -252,6 +257,7 @@ var portfolioDetails = [{
           }],
       heading: 'Wine Bottle Art',
       description: ' The Wine Bottle Art is one of my college project. Used various shadows, reflection and cutting techniques to make the bottle realistic and finally finished it off using photoshop. '
+
   },
   {
       thumbnailUrl: 'img/portfolio_7.png',

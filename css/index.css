@@ -1169,6 +1169,10 @@ figure.effect-milo:hover p {
     height: 2.7em;
 }
 
+.contact-icon {
+    color: #e38d13;
+}
+
 #map {
     height: 14em;
     border: 0;
@@ -1200,7 +1204,9 @@ figure.effect-milo:hover p {
 
 .gmap {
     height:100%;
+
 }
+
 /*********************************************/
 /* End: Contact Me Page Styles */
 
