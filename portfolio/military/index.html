@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Military Alphabets</title>
+    <meta name="description" content="Military Alphabet Generator" />
+    <meta name="keywords" content="Military Alphabet Generator, Angular, Material, Web Designer, Web Developer" />
+    <meta name="author" content="Revathy Sindhu" />
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/angular-material.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/materialdesignicons.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+
+
+<body ng-app="MilitaryAlphabetApp" flex ng-controller="MilitaryAlphabetController" ng-cloak>
+    
+    <md-content class="md-padding" layout-xs="column" layout-sm="column"  layout-xs="column" layout-md="row" layout-gt-md="row" layout="row" layout-align="center stretch" flex>
+    <div flex>
+      <md-card flex layout-padding class="first-card">
+       <md-input-container flex >
+            <label>Enter Your Text Here To Get Military Codes</label>
+            <input ng-model="firstText"/>
+      </md-input-container>  
+        <md-card-content>
+          <div ng-show="firstWords.length === 0" class="no-data-yet">
+            Woo Hoo... Nothing Here Yet!!
+          </div>
+          <div ng-show="firstWords.length > 0">
+             <div flex layout="row" ng-repeat="firstWord in firstWords track by $index" layout-padding>
+                 <div class="alphabet" >{{firstWord.alphabet}}</div>
+                 <div flex class="word" >{{firstWord.word}}</div>
+             </div>
+          </div>
+          
+        </md-card-content>
+      </md-card>
+    </div>
+    <div flex ng-show="showSecondCard">  
+      <md-card flex layout-padding class="second-card">
+       <md-input-container flex >
+            <label>Enter Your Text Here To Get Military Codes</label>
+            <input ng-model="secondText"/>
+      </md-input-container>  
+        <md-card-content>
+          <div ng-show="secondWords.length === 0" class="no-data-yet">
+            Woo Hoo... Nothing Here Yet!!
+          </div>
+          <div ng-show="secondWords.length > 0">
+             <div flex layout="row" ng-repeat="secondWord in secondWords track by $index" layout-padding>
+                 <div class="alphabet" >{{secondWord.alphabet}}</div>
+                 <div flex class="word">{{secondWord.word}}</div>
+             </div>
+          </div>
+        </md-card-content>
+      </md-card>
+    </div>
+    <div flex>  
+      <md-card flex layout-padding class="reference-card">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Military Alphabets Reference</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <div layout="row" flex>
+              <div flex>
+                  <div flex layout="row" ng-repeat="reference in referenceList track by $index" ng-if="$index % 2 == 0" layout-padding>
+                    <div class="alphabet" >{{reference.alphabet}}</div>
+                    <div flex class="word">{{reference.word}}</div>
+                 </div>
+              </div>
+              <div flex>
+                  <div flex layout="row" ng-repeat="reference in referenceList track by $index" ng-if="$index % 2 == 1"layout-padding>
+                    <div class="alphabet" >{{reference.alphabet}}</div>
+                    <div flex class="word">{{reference.word}}</div>
+                 </div>
+              </div>
+          </div>  
+          
+        </md-card-content>
+      </md-card>
+      </div>
+    </md-content>
+    <!-- JavaScript Sources -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-animate.min.js"></script>
+    <script src="js/angular-aria.min.js"></script>
+    <script src="js/angular-messages.min.js"></script>
+    <script src="js/angular-material.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

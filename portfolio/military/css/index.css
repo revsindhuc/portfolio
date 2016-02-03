@@ -1,0 +1,39 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+md-input-container .md-errors-spacer {
+    min-height: 0px !important;
+    min-width: 0px !important;
+    float: none !important;
+}
+
+.first-card {
+    background-color: beige;
+}
+
+.second-card {
+    background-color: wheat;
+}
+
+
+.reference-card {
+    background-color: powderblue
+}
+
+.alphabet {
+    font-weight: bold;
+    color: teal;
+    font-size: 1.2em;
+    line-height: 1.2em;
+}
+
+.word {
+    vertical-align: middle;
+    line-height: 1.2em;
+    padding-top: 0.6em !important;
+}
+
+.no-data-yet {
+    color: grey;
+}
