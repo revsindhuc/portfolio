@@ -107,19 +107,16 @@ $(document).ready( function(){
                 $(".grid-item").height(gridItemHeight);
             
                 if(typeof(event) !== "undefined") {
-                    console.log("undefined here");
                     $(".grid").height(gridItemHeight*2);
                     $(".portfolio-content").height((gridItemHeight*2) + 10);
                 }
             }
             
             if($(".grid-item .thumbnail img").width() < $(".grid-item").width()) {
-                console.log("width here");
                 $(".grid-item .thumbnail img").width($(".grid-item").width());
             }
             $isotopeGrid.isotope('layout');
     }
-    //onResize();
     $(window).resize(onResize);
     setTimeout(function(){onResize();}, 700);
 
@@ -372,11 +369,19 @@ function DialogController($scope, $sce, $mdDialog, index) {
   };
 }
 
-revaPortfolioApp.controller("ContactMeController", function($scope, ContactMeService) {
+revaPortfolioApp.controller("ContactMeController", function($scope, $log, $mdToast, $document, ContactMeService) {
  $scope.newMessage = { name: '', email: '', message: ''};
  $scope.addMessage = function() {
-     ContactMeService.addMessage($scope.newMessage);
- };
+     ContactMeService.addMessage($scope.newMessage).then(function(p){
+            $mdToast.show(
+                $mdToast.simple()
+                    .textContent('Thank you for the message!!')
+                    .position('center center')
+                    .hideDelay(2000)).then(function(){
+                        $scope.newMessage = { name: '', email: '', message: ''};
+                    });
+         });
+    };
 });
 revaPortfolioApp.constant('FIREBASE_URI', 'https://reva-portfolio.firebaseio.com/');
 revaPortfolioApp.factory("ContactMeService", function($firebaseArray, FIREBASE_URI){
@@ -384,7 +389,7 @@ revaPortfolioApp.factory("ContactMeService", function($firebaseArray, FIREBASE_U
     var messages = $firebaseArray(ref);
     
     var addMessage = function(message) {
-      messages.$add(message);  
+      return messages.$add(message);  
     };
     
     return {

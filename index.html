@@ -421,64 +421,24 @@
             <div class="row">
                 <div class="row pt-page-1-content contactFormContainer" ng-controller="ContactMeController">
                     <form name="contactMeForm">
-                        <!--<div layout-gt-xs="row">-->
-                            <!--<md-input-container class="md-block" flex-gt-sm layout-margin >-->
-                                <!--<label class="md-text">Name</label>-->
-                                <!--<input type="text" ng-model="newMessage.name" required  name="name"/>-->
-                                <!--<div ng-messages="contactMeForm.name.$error">-->
-                                    <!--<div class="md-text" ng-message="required">Your name is required.</div>-->
-                                <!--</div>-->
-                            <!--</md-input-container>-->
-                            <!--<md-input-container class="md-block" flex-gt-sm layout-margin>-->
-                                <!--<label class="md-text">Email</label>-->
-                                <!--<input type="email" required ng-model="newMessage.email" minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/"/>-->
-                                <!--<div ng-messages="contactMeForm.email.$error" role="alert">-->
-                                    <!--<div class="md-text" ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">-->
-                                        <!--Your email must be between 10 and 100 characters long and look like an e-mail address.-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</md-input-container>-->
-                        <!--</div>-->
-                        <!--<md-input-container class="md-block" layout-margin>-->
-                            <!--<label class="md-text">Message</label>-->
-                            <!--<textarea columns="1" rows="5" ng-model="newMessage.message" required></textarea>-->
-                            <!--<div ng-messages="contactMeForm.message.$error">-->
-                                <!--<div class="md-text" ng-message="required">A message is required.</div>-->
-                            <!--</div>-->
-                        <!--</md-input-container>-->
-                        <!--<section class="contactFormButtonsRow" layout="row" layout-sm="column" layout-align="center center">-->
-                            <!--<md-button class="md-raised md-primary" ng-click="addMessage()" ng-disabled="contactMeForm.$invalid">Send Message</md-button>-->
-                        <!--</section>-->
-                        <style>
-                            .form-control {
-                                background-color: rgba(255,255,255,0.4);
-                            }
-
-                            .form-row {
-                                margin-top: 20px;
-                            }
-
-                        </style>
-
                         <div class="row form-row">
                             <div class="col-md-2"></div>
-                            <div class="col-md-4 form-group-lg"><input type="text" class="form-control input-lg" id="name" placeholder="Name" /></div>
-                            <div class="col-md-4 form-group-lg"><input type="email" class="form-control input-lg" id="emailAddress" placeholder="Email" /></div>
+                            <div class="col-md-4 form-group-lg"><input type="text" class="form-control input-lg" id="name" placeholder="Name" ng-model="newMessage.name"/></div>
+                            <div class="col-md-4 form-group-lg"><input type="email" class="form-control input-lg" id="emailAddress" placeholder="Email" ng-model="newMessage.email"/></div>
                             <div class="col-md-2"></div>
                         </div>
                         <div class="row form-row">
                             <div class="col-md-2"></div>
-                            <div class="col-md-8 form-group-lg"><textarea class="form-control" rows="4" placeholder="Message" ></textarea></div>
+                            <div class="col-md-8 form-group-lg"><textarea class="form-control" rows="4" placeholder="Message" ng-model="newMessage.message"></textarea></div>
                             <div class="col-md-2"></div>
                         </div>
-
+                        <div class="row text-center" id="toastBounds"></div>        
                         <div class="row form-row">
                             <div class="col-md-2"></div>
-                            <div class="col-md-8 form-group-lg text-center"><button type="button" class="btn btn-info">SEND MESSAGE</button>
+                            <div class="col-md-8 form-group-lg text-center"><button type="button" class="btn btn-info" ng-click="addMessage()" ng-disabled="contactMeForm.$invalid">SEND MESSAGE</button>
                             </div>
                             <div class="col-md-2"></div>
                         </div>
-
                     </form>
                 </div>
             </div>
