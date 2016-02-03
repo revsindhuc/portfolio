@@ -20,15 +20,14 @@
             <md-toolbar md-scroll-shrink>
                 <div class="md-toolbar-tools">My Messages</div>
             </md-toolbar>
-            <md-content style="height: 600px;" md-theme="altTheme">
+            <md-content flex md-theme="altTheme">
                 <section>
-                <!--<md-subheader class="md-primary">My Portfolio Messages</md-subheader>-->
                 <md-list layout-padding>
-                    <md-list-item class="md-3-line" ng-repeat="message in messages">
-                        <i class="mdi mdi-message"></i> 
+                    <md-list-item class="md-3-line" ng-repeat="message in messages | toArray | orderBy: '-when'">
+                        <md-icon md-svg-icon="message" class="message-icon"></md-icon>
                         <div class="md-list-item-text">
-                        <h3>{{message.name}}</h3>
-                        <h4>{{message.email}}</h4>
+                        <h3>{{message.name}} <a href="mailto:{{message.email}}">{{message.email}}</a></h3>
+                        <h4>{{message.timestamp | date:'medium'}}</h4>
                         <p>
                             {{message.message}}
                         </p>

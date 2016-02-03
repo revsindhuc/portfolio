@@ -345,8 +345,9 @@ revaPortfolioApp.controller("PortfolioController", function($scope, $sce, $mdDia
     };
 });
 
-revaPortfolioApp.config(['$locationProvider', function($locationProvider){
+revaPortfolioApp.config(['$locationProvider', '$mdIconProvider', function($locationProvider, $mdIconProvider){
     $locationProvider.html5Mode(true).hashPrefix('');
+    $mdIconProvider.defaultIconSet('img/mdi.svg');
 }]);
 
 
@@ -370,8 +371,11 @@ function DialogController($scope, $sce, $mdDialog, index) {
 }
 
 revaPortfolioApp.controller("ContactMeController", function($scope, $log, $mdToast, $document, ContactMeService) {
- $scope.newMessage = { name: '', email: '', message: ''};
+ $scope.newMessage = { name: '', email: '', message: '', when: 0};
+ $scope.adding = false;
  $scope.addMessage = function() {
+     $scope.adding = true;
+     $scope.newMessage.when = Date.now();
      ContactMeService.addMessage($scope.newMessage).then(function(p){
             $mdToast.show(
                 $mdToast.simple()
@@ -379,6 +383,7 @@ revaPortfolioApp.controller("ContactMeController", function($scope, $log, $mdToa
                     .position('center center')
                     .hideDelay(2000)).then(function(){
                         $scope.newMessage = { name: '', email: '', message: ''};
+                        $scope.adding = false;
                     });
          });
     };
@@ -389,6 +394,7 @@ revaPortfolioApp.factory("ContactMeService", function($firebaseArray, FIREBASE_U
     var messages = $firebaseArray(ref);
     
     var addMessage = function(message) {
+      console.log(message);
       return messages.$add(message);  
     };
     
