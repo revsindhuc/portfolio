@@ -5,7 +5,7 @@ var PageTransitions = (function() {
         pagesCount = $pages.length,
         $previousPageLink = $('.previousPageLink'),
         $nextPageLink = $('.nextPageLink'),
-        $navigationLink = $('.navigationLink'),
+        $navigationLink = $('#navigateBtn'),
         pageNames = ['about', 'skills', 'work', 'education', 'portfolio', 'contact'],
         sortedPages=[],
         pagesByName={},
@@ -60,11 +60,8 @@ var PageTransitions = (function() {
 		} );
 
         $navigationLink.on('click', function() {
-            if( isAnimating ) {
-				return false;
-			}
-            
-            var targetPage = $(this).attr('target-page');
+
+            var targetPage = $("#targetPage").val();
             if(!targetPage) return;
             goToPage(targetPage);
 
@@ -74,7 +71,61 @@ var PageTransitions = (function() {
 
     function goToPage(targetPageName ) {
 		var targetPageIndex = pageNames.indexOf(targetPageName);
-        var animation = 61;
+		if(targetPageIndex < 0) {
+			return;
+		}
+		var currentPageIndex = current;
+
+		if(targetPageIndex === currentPageIndex) {
+			// No need to navigate
+			return;
+		}
+
+		var moveForward;
+		var steps=0;
+		if(targetPageIndex > currentPageIndex) {
+			// Move forward
+			if((targetPageIndex - currentPageIndex) > 3) {
+				// Rather Move back
+				moveForward = false;
+				steps = 6 - (targetPageIndex - currentPageIndex);
+			}
+			else
+			{
+				// Move forward indeed
+				moveForward = true;
+				steps = targetPageIndex - currentPageIndex;
+			}
+		} else {
+			// Move backwards
+			if((currentPageIndex - targetPageIndex) > 3) {
+				// Rather Move forward
+				moveForward = true;
+				steps = 6 - (currentPageIndex - targetPageIndex);
+			}
+			else
+			{
+				// Move backwards indeed
+				moveForward = false;
+				steps = currentPageIndex - targetPageIndex;
+			}
+		}
+
+		console.log(moveForward);
+		console.log(steps);
+		var i= 0, time=700;
+		for(i=0;i<steps;i++) {
+			if(moveForward) {
+				setTimeout(nextPage, time);
+				time=time + 700;
+			} else {
+				setTimeout(previousPage, time);
+				time=time + 700;
+
+			}
+		}
+
+        /*var animation = 61;
 		if( isAnimating ) {
 			return false;
 		}
@@ -115,7 +166,7 @@ var PageTransitions = (function() {
 
 		if( !support ) {
 			onEndAnimation( $currPage, $nextPage );
-		}
+		}*/
 	}
 
 	function nextPage(options ) {
