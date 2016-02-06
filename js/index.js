@@ -236,7 +236,30 @@ var portfolioDetails = [{
       description: ' Used various text brushes and worked with shadows and midtones. Then adjusted the brush settings and painted some text. Finally created a layer mask and painted using various brushes. '
   },
   {
-      thumbnailUrl: 'img/portfolio_6.png',
+      thumbnailUrl: 'img/portfolio_6N.png',
+      shortDescription: 'NATO Phonetic Alphabet App',
+      categories: 'web-design',
+      imageUrl: 'img/portfolio_6LN.png',
+      skills: [{
+          icon:'fa-archive',
+          text: 'Web Design'
+      },
+          {
+              icon:'fa-check',
+              text: 'Responsive, Rich, Performance'
+          },
+          {
+              icon:'fa-cog',
+              text: 'HTML, CSS, AngularJS and Angular Material'
+          },
+          {
+              icon:'fa-link',
+              text: '<a href="portfolio/military/index.html" target="_blank">Click here for demo</a>'
+          }],
+      heading: 'Phonetic App',
+      description: ' Responsive material app to generate the NATO phonetic alphabet for any given text. '
+
+      /*thumbnailUrl: 'img/portfolio_6.png',
       shortDescription: 'Wine Bottle Art using Photoshop',
       categories: 'graphic-design',
       imageUrl: 'img/portfolio_6L.png',
@@ -253,7 +276,7 @@ var portfolioDetails = [{
             text: 'Adobe Photoshop'
           }],
       heading: 'Wine Bottle Art',
-      description: ' The Wine Bottle Art is one of my college project. Used various shadows, reflection and cutting techniques to make the bottle realistic and finally finished it off using photoshop. '
+      description: ' The Wine Bottle Art is one of my college project. Used various shadows, reflection and cutting techniques to make the bottle realistic and finally finished it off using photoshop. '*/
 
   },
   {
