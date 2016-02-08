@@ -422,22 +422,21 @@
                 <div class="row pt-page-1-content contactFormContainer" ng-controller="ContactMeController">
                     <form name="contactMeForm">
                         <div class="row form-row">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-4 form-group-lg"><input type="text" class="form-control input-lg" id="name" placeholder="Name" ng-model="newMessage.name"/></div>
-                            <div class="col-md-4 form-group-lg"><input type="email" class="form-control input-lg" id="emailAddress" placeholder="Email" ng-model="newMessage.email"/></div>
-                            <div class="col-md-2"></div>
+                            <div class="col-md-1"></div>
+                            <div class="col-md-5 form-group-lg"><input type="text" class="form-control input-lg" id="name" placeholder="Name" ng-model="newMessage.name"/></div>
+                            <div class="col-md-5 form-group-lg"><input type="email" class="form-control input-lg" id="emailAddress" placeholder="Email" ng-model="newMessage.email"/></div>
+                            <div class="col-md-1"></div>
                         </div>
                         <div class="row form-row">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-8 form-group-lg"><textarea class="form-control" rows="4" placeholder="Message" ng-model="newMessage.message"></textarea></div>
-                            <div class="col-md-2"></div>
+                            <div class="col-md-1"></div>
+                            <div class="col-md-10 form-group-lg"><textarea class="form-control" rows="4" placeholder="Message" ng-model="newMessage.message"></textarea></div>
+                            <div class="col-md-1"></div>
                         </div>
-                        <div class="row text-center" id="toastBounds"></div>        
                         <div class="row form-row">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-8 form-group-lg text-center"><button type="button" class="btn btn-info" ng-click="addMessage()" ng-disabled="contactMeForm.$invalid || adding">SEND MESSAGE</button>
+                            <div class="col-md-1"></div>
+                            <div class="col-md-10 form-group-lg text-center"><button type="button" class="btn btn-info" ng-click="addMessage()" ng-disabled="contactMeForm.$invalid || adding">SEND MESSAGE</button>
                             </div>
-                            <div class="col-md-2"></div>
+                            <div class="col-md-1"></div>
                         </div>
                     </form>
                 </div>

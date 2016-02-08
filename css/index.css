@@ -1190,10 +1190,10 @@ figure.effect-milo:hover p {
 /* Start: Contact Me Page Styles */
 .contactFormContainer {
     margin-top: 15px;
-    margin-left: 5em;
-    margin-right: 5em;
-    padding-left: 5em;
-    padding-right: 5em;
+    margin-left: 3em;
+    margin-right: 3em;
+    padding-left: 3em;
+    padding-right: 3em;
 }
 
 .contactFormButtonsRow {
@@ -1254,6 +1254,23 @@ figure.effect-milo:hover p {
 .gmap {
     height:100%;
 
+}
+
+@media screen and (max-width: 1200px) {
+	.contactFormContainer {
+		margin-left: 1em;
+		margin-right: 1em;
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+
+	.input-lg {
+		margin-bottom: 10px;
+	}
+
+	textarea.form-control {
+		margin-top: -20px;
+	}
 }
 
 /*********************************************/
