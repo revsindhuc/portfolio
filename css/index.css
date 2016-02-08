@@ -214,6 +214,14 @@ html, body { height: 100%; }
 		font-size: 3em;
 	}
 }
+
+@media screen and (max-width: 600px) {
+	.pt-page {
+		overflow-y: auto;
+	}
+}
+
+
 /*********************************************/
 /* End: Page Transition Styles */
 
@@ -382,12 +390,19 @@ html, body { height: 100%; }
 }
 
 .nextPageNavContainer {
-    position: absolute;
+	position: absolute;
     top: 90%;
 }
 
 .nextPageLink .fa-lg, .previousPageLink .fa-lg{
     font-size: 1em;
+}
+
+@media screen and (max-width: 1200px) {
+	.nextPageNavContainer {
+		position: static;
+		display: block;
+	}
 }
 
 /*********************************************/
@@ -524,6 +539,27 @@ html, body { height: 100%; }
 	background-position: top right;
 	margin-left: 10px;
 }
+
+@media screen and (max-width: 1200px) {
+	.profile-picture {
+		min-width: 200px;
+	}
+
+	.about-me-left, .about-me-right {
+		text-align: center;
+		overflow: hidden;
+		display: block;
+	}
+
+	.about-me-left {
+		margin-bottom: 20px;
+	}
+
+	.about-me-right {
+		margin-top: -25px;
+	}
+}
+
 /*********************************************/
 /* End: About Page Carousel/Gallery Styles */
 
