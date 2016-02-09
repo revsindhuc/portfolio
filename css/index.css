@@ -399,10 +399,10 @@ html, body { height: 100%; }
 }
 
 @media screen and (max-width: 1200px) {
-	/*.nextPageNavContainer {
+	.nextPageNavContainer {
 		position: static;
 		display: block;
-	}*/
+	}
 }
 
 /*********************************************/
@@ -941,9 +941,15 @@ html, body { height: 100%; }
     color:white;
     font-weight: bold;
     font-family:Helvetica;
-    font-size:18px;
+    font-size:16px;
 }
 
+
+@media screen and (max-width: 1200px) {
+	.interest_text{
+		font-size:13px;
+	}
+}
 /*********************************************/
 /* End: Education Page Styles */
 
@@ -1196,11 +1202,19 @@ figure.effect-milo:hover p {
 	figure.effect-honey h2, figure.effect-honey h2 i {
 		font-size: 1.2em;
 	}
+
+	.grid {
+		display: block;
+	}
 }
 
 @media screen and (max-width: 600px) {
 	.grid-item {
 		width: 100%;
+	}
+
+	.grid {
+		display: block;
 	}
 }
 
@@ -1388,7 +1402,6 @@ md-dialog, md-toolbar, .md-toolbar-tools {
 	.portfolio-dialog-skills, .portfolio-dialog-details {
 		width: 50%;
 	}
-
 }
 
 
