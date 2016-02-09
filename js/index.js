@@ -95,20 +95,6 @@ $(document).ready( function(){
             $(".fullheight").height(height);
             $(".gmap").width(width);
 
-            // Aligning page navigation icons                
-
-           /* var pageContentHeight = $('.page-content').height();
-            var pageContentTop = $('.page-content').position().top;
-            var nextPageNavBuffer = 30;
-            var nextPageNavContainerTop = height - 80;
-            var nextPageNavContainerLeft = (width/2) - (32)/2;
-
-            if((nextPageNavContainerTop) > (pageContentTop + pageContentHeight + nextPageNavBuffer)) {
-                $(".nextPageNavContainer").css({top: nextPageNavContainerTop, left: nextPageNavContainerLeft});
-            } else {
-                $(".nextPageNavContainer").css({top: pageContentTop + pageContentHeight + nextPageNavBuffer , left: nextPageNavContainerLeft});
-            }*/
-            
             // Aligning portfolio page elements
             var gridItemHeight = $(".grid-item .thumbnail img").height();
             if(gridItemHeight !== 0) {
