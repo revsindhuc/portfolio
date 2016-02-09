@@ -1,28 +1,33 @@
-<md-dialog aria-label="Portfolio"  ng-cloak flex>
-  <form>
-    <!-- Full dialog content-->
-    <md-toolbar class="md-toolbar-tools dialog-header">
-        <h2>{{title}}</h2>
-        <span flex></span>
-        <md-button class="md-icon-button" ng-click="cancel()">
-            <md-icon class="mdi mdi-window-close dialog-close-icon"></md-icon>
-        </md-button>
-    </md-toolbar>
-    <md-dialog-content flex > 
-      <div class="md-dialog-content" style="color:black;" flex layout="row">
-         <div layout="row" flex layout-padding layout-align="start stretch" class="md-whiteframe-8dp" > 
-             <div flex="66" >
-                 <img ng-src="{{detail.imageUrl}}" class="portfolio-dialog-image" />
-             </div>
-             <div flex="33" layout="column" layout-align="space-around stretch">
-                 <div class="portfolio-dialog-skill" ng-repeat="skill in detail.skills"><i class="fa fa-lg {{skill.icon}}"></i> <span ng-bind-html="skill.text">{{skill.text}}</span></div>
-                 <div>
-                     <h2>{{detail.heading}}</h2>
-                     <div>{{detail.description}}</div>
-                 </div>
-             </div> 
-         </div>    
-      </div>
-    </md-dialog-content>
-  </form>
+<md-dialog aria-label="Portfolio" ng-cloak flex>
+    <form>
+        <!-- Full dialog content-->
+        <md-toolbar class="md-toolbar-tools dialog-header">
+            <h2>{{title}}</h2>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="cancel()">
+                <md-icon class="mdi mdi-window-close dialog-close-icon"></md-icon>
+            </md-button>
+        </md-toolbar>
+        <md-dialog-content flex layout-align="center stretch">
+            <div class="md-dialog-content" style="color:black;" flex layout="row" layout-align="center stretch">
+                <div flex layout-padding layout-align="start stretch" class="md-whiteframe-8dp" layout-gt-md="row" layout="column">
+                    <div flex="66">
+                        <img ng-src="{{detail.imageUrl}}" class="portfolio-dialog-image"/>
+                    </div>
+                    <div flex="33" layout-gt-md="column" layout="row" layout-align-gt-md="space-around stretch" layout-align="start stretch">
+                        <div flex layout="column" layout-align="space-around start" class="portfolio-dialog-skills">
+                            <div class="portfolio-dialog-skill" ng-repeat="skill in detail.skills" layout="row">
+                                <i class="fa fa-lg {{skill.icon}}"></i>
+                                <span ng-bind-html="skill.text">{{skill.text}}</span>
+                            </div>
+                        </div>
+                        <div  layout="column" layout-align-gt-md="end start" layout-align="start start" class="portfolio-dialog-details">
+                            <h2 class="portfolio-dialog-heading">{{detail.heading}}</h2>
+                            <div class="portfolio-dialog-description">{{detail.description}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </md-dialog-content>
+    </form>
 </md-dialog>

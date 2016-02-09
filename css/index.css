@@ -399,10 +399,10 @@ html, body { height: 100%; }
 }
 
 @media screen and (max-width: 1200px) {
-	.nextPageNavContainer {
+	/*.nextPageNavContainer {
 		position: static;
 		display: block;
-	}
+	}*/
 }
 
 /*********************************************/
@@ -1183,6 +1183,28 @@ figure.effect-milo:hover p {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }*/
+
+@media screen and (max-width: 1200px) {
+	.grid-item {
+		width: 50%;
+	}
+
+	.portfolio_filter_buttons button {
+		font-size: 1em;
+	}
+
+	figure.effect-honey h2, figure.effect-honey h2 i {
+		font-size: 1.2em;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.grid-item {
+		width: 100%;
+	}
+}
+
+
 /*********************************************/
 /* End: Portfolio Page Styles */
 
@@ -1332,6 +1354,43 @@ md-dialog, md-toolbar, .md-toolbar-tools {
 .md-text {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+@media screen and (min-width: 1201px) {
+	.portfolio-dialog-heading {
+		margin-top: 40px;
+	}
+}
+
+@media screen and (max-width:1200px) {
+	.portfolio-dialog-skill span{
+		font-size: 0.8em;
+		padding-left: 0.5em;
+	}
+
+	.portfolio-dialog-heading {
+		font-size: 1em;
+		margin-top: -10px;
+	}
+
+	.portfolio-dialog-description {
+		font-size: 0.8em;
+	}
+
+	.portfolio-dialog-skill .fa {
+		font-size: 1em;
+		width: 1em;
+	}
+
+	.portfolio-dialog-image {
+		max-width: 100%;
+	}
+
+	.portfolio-dialog-skills, .portfolio-dialog-details {
+		width: 50%;
+	}
+
+}
+
 
 /*********************************************/
 /* End: Portfolio Dialog Styles */
