@@ -367,7 +367,7 @@ html, body { height: 100%; }
 
 .navigationContainer {
     margin:auto;
-    text-align: middle;
+    text-align: center;
 }
 
 .page-nav-previous {
@@ -399,20 +399,25 @@ html, body { height: 100%; }
 }
 
 .previousPageLink, .nextPageLink {
-	font-family: Verdana, serif;
-	font-size: 0.9em;
-	color:  rgba(255,255,255,0.6);
+	font-family: Roboto, Verdana, serif;
+	font-size: 1.1em;
+	color: rgba(255,255,255,0.6);
 	text-transform: capitalize;
-	/*background-color: rgba(255,255,255,0.6);
-	border-radius: 5px;*/
+	font-weight: 500;
 }
 
-/*@media screen and (max-width: 1200px) {
-	.nextPageNavContainer {
-		position: static;
-		display: block;
+@media screen and (max-width: 1200px) {
+	.previousPageLink, .nextPageLink {
+		font-size: 1em;
 	}
-}*/
+}
+
+
+@media screen and (max-width: 700px) {
+	.previousPageLink, .nextPageLink {
+		font-size: 0.8em;
+	}
+}
 
 /*********************************************/
 /* End: Page Navigation Styles */
@@ -837,6 +842,19 @@ html, body { height: 100%; }
 	}*/
 }
 
+@media screen and (max-width: 500px) {
+
+	.experience-date-container-small {
+		float: left;
+		display: block;
+		margin-top: 130px;
+	}
+
+	.experience-container {
+		margin-top: -60px;
+	}
+}
+
 /*********************************************/
 /* End: Skills Page Styles */
 
@@ -996,6 +1014,11 @@ html, body { height: 100%; }
 		padding:20px;
 		width:auto;
 	}
+}
+
+.interest_wrapper img {
+	max-width: 100%;
+	max-height: 100%;
 }
 
 .interest_wrapper{
