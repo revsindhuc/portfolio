@@ -385,25 +385,34 @@ html, body { height: 100%; }
 }
 
 .previousPageLink:hover, .nextPageLink:hover {
-    color: #ddd;
+	color: white;
     cursor: hand; cursor: pointer;
 }
 
 .nextPageNavContainer {
-	position: absolute;
-    top: 90%;
+	position: relative;
+    top: 40px;
 }
 
 .nextPageLink .fa-lg, .previousPageLink .fa-lg{
     font-size: 1em;
 }
 
-@media screen and (max-width: 1200px) {
+.previousPageLink, .nextPageLink {
+	font-family: Verdana, serif;
+	font-size: 0.9em;
+	color:  rgba(255,255,255,0.6);
+	text-transform: capitalize;
+	/*background-color: rgba(255,255,255,0.6);
+	border-radius: 5px;*/
+}
+
+/*@media screen and (max-width: 1200px) {
 	.nextPageNavContainer {
 		position: static;
 		display: block;
 	}
-}
+}*/
 
 /*********************************************/
 /* End: Page Navigation Styles */
@@ -771,6 +780,63 @@ html, body { height: 100%; }
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent #3b323c;
 }
+
+.experience-date-container-small {
+	display:none;
+}
+
+@media screen and (max-width: 1200px) {
+	.experience-panel-right, .experience-panel-left{
+		width:100%;
+	}
+
+	.experience-date-container-small {
+		float: left;
+		display:block;
+	}
+
+	.experience-date-container-right:before, .experience-date-container-left:before {
+		border-color: transparent transparent transparent transparent;
+	}
+
+	.experience-date-container-large {
+		display:none;
+	}
+
+	.experience-timeline-container {
+		display:none;
+	}
+
+	.experience-panel-left, .experience-panel-right, .experience-panel-left .experience-description, .experience-panel-right .experience-description {
+		float:left;
+		text-align: left;
+	}
+
+	.experience-panel-right .experience-description {
+		padding-left: 56px;
+		margin-top: -20px !important;
+		margin-bottom: 20px;
+	}
+
+	.experience-description-container {
+		padding-left:0px;
+	}
+
+	.experience-description {
+		margin-top: 0px !important;
+		margin-bottom: 0px;
+	}
+
+	.experience-container {
+		margin-top: 20px;
+	}
+
+	/*.pt-page-3 .nextPageNavContainer {
+		position: static;
+		display: block;
+	}*/
+}
+
 /*********************************************/
 /* End: Skills Page Styles */
 
