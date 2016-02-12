@@ -1,3 +1,8 @@
+/***
+ * Created By Revathy Sindhu Chellapandian
+ *
+ *  Angular Application for the Military Alphabets App
+ */
 var militaryAlphaModule = angular.module('MilitaryAlphabetApp', ['ngMaterial', 'ngMessages']);
 
 militaryAlphaModule.controller("MilitaryAlphabetController", function($scope, $mdMedia, MilitaryAlphabets, MilitaryAlphabetService){
@@ -49,6 +54,14 @@ militaryAlphaModule.controller("MilitaryAlphabetController", function($scope, $m
 militaryAlphaModule.service("MilitaryAlphabetService", function(MilitaryAlphabets){
     var SPACER = "--SPACE--";
     var NULL = null;
+
+    /***
+     * Gets the NATO Phonetic Word for a given alphabet
+     * @param alphabet
+     * @returns {*}
+     * String - NATO Phonetic Word or
+     * NULL if the input alphabet is invalid
+     */
     function getWord(alphabet) {
         if(angular.isUndefined(alphabet) || alphabet===null || !(angular.isString(alphabet))) {
             return NULL;
@@ -72,7 +85,13 @@ militaryAlphaModule.service("MilitaryAlphabetService", function(MilitaryAlphabet
             return alphabet;
         }
     }
-    
+
+    /***
+     * Given a text input, this function returns an array of
+     * words where each word is the NATO Phonetic Word for each alphabet
+     * @param text
+     * @returns {*} Array of words
+     */
     function getWords(text) {
         if(angular.isUndefined(text) || text===null || !(angular.isString(text))) {
             return NULL;
@@ -111,6 +130,9 @@ militaryAlphaModule.service("MilitaryAlphabetService", function(MilitaryAlphabet
     
 });
 
+/***
+ * The reference Object for the NATO Phonetic Words for alphabets
+ */
 militaryAlphaModule.constant("MilitaryAlphabets", {
     A : 'Alfa',
     B : 'Bravo',

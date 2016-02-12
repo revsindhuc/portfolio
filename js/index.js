@@ -1,5 +1,5 @@
 /**$
- * Created By Revathy Sindhu Chellpandian
+ * Created By Revathy Sindhu Chellapandian
  *
  * Main script for teh portfolio site
  */
