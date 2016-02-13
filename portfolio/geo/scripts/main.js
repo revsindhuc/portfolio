@@ -1,5 +1,5 @@
 /**
- * Created by Ragul.Kumar on 12/4/13.
+ * Created by Revathy Sindhu on 12/4/13.
  */
 $(document).ready(function () {
     $("#planb_geospatial_box").click(
