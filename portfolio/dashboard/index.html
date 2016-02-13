@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="executiveDashboardApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Dashboard</title>
+    <link href="css/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="wrapper wrapper-content">
+    <div class="row">
+        <div class="col-lg-3" ng-controller="incomeController">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <span class="label label-success pull-right label-period">{{ incomeSummary.summary.period}}</span>
+                    <h5><i class="fa fa-usd fa-lg icon-income"></i> Income</h5>
+                </div>
+                <div class="ibox-content">
+                    <h1 class="no-margins">$ {{ incomeSummary.summary.totalIncome | number : 0}}</h1>
+                    <div class="stat-percent font-bold" ng-class="{'text-success':isIncomeUp, 'text-danger':!isIncomeUp}" >{{ incomeSummary.summary.percentageChange}}%
+                        <i class="fa fa-bolt" ng-class="{'fa-level-up':isIncomeUp, 'fa-level-down':!isIncomeUp}"></i></div>
+                    <small>Total income</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3" ng-controller="ordersController">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <span class="label label-info pull-right label-period">{{ ordersSummary.summary.period}}</span>
+                    <h5><i class="fa fa-shopping-cart fa-lg icon-orders"></i> Orders</h5>
+                </div>
+                <div class="ibox-content">
+                    <h1 class="no-margins">{{ ordersSummary.summary.orders | number : 0}}</h1>
+
+                    <div class="stat-percent font-bold" ng-class="{'text-info':isOrdersUp, 'text-danger':!isOrdersUp}" >{{ ordersSummary.summary.percentageChange}}%
+                        <i class="fa fa-level-up" ng-class="{'fa-level-up':isOrdersUp, 'fa-level-down':!isOrdersUp}"></i></div>
+                    <small>New orders</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3" ng-controller="visitsController">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <span class="label label-primary pull-right label-period">{{ visitsSummary.summary.period}}</span>
+                    <h5><i class="fa fa-eye fa-lg icon-visits"></i> Visits</h5>
+                </div>
+                <div class="ibox-content">
+                    <h1 class="no-margins">{{ visitsSummary.summary.visits | number : 0}}</h1>
+                    <div class="stat-percent font-bold" ng-class="{'text-navy':isVisitsUp, 'text-danger':!isVisitsUp}" >{{ visitsSummary.summary.percentageChange}}%
+                        <i class="fa fa-level-up" ng-class="{'fa-level-up':isVisitsUp, 'fa-level-down':!isVisitsUp}"></i></div>
+                    <small>New visits</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3" ng-controller="likesController">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <span class="label label-warning pull-right label-period">{{ likesSummary.summary.period}}</span>
+                    <h5><i class="fa fa-thumbs-up fa-lg icon-likes"></i> Likes</h5>
+                </div>
+                <div class="ibox-content">
+                    <h1 class="no-margins">{{ likesSummary.summary.likes | number : 0}}</h1>
+                    <div class="stat-percent font-bold" ng-class="{'text-warning':isLikesUp, 'text-danger':!isLikesUp}" >{{ likesSummary.summary.percentageChange}}%
+                        <i class="fa fa-level-up" ng-class="{'fa-level-up': isLikesUp, 'fa-level-down': !isLikesUp}"></i></div>
+                    <small>{{ likesSummary.summary.period}}</small>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-lg-12" ng-controller="ordersChartController">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5><i class="fa fa-shopping-cart fa-lg icon-orders"></i> Orders</h5>
+                    <span class="label label-primary pull-right label-period">This Month</span>
+                </div>
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-lg-9">
+                            <div class="flot-chart">
+                                <div flot class="flot-chart-content" dataset="dataset" options="options"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <ul class="stat-list">
+                                <li>
+                                    <h2 class="no-margins">{{ ordersReport.report.ordersSummary.orders | number : 0 }}</h2>
+                                    <small>Total orders so far this month</small>
+                                    <div class="stat-percent" ng-class="{'text-navy':isOrdersUp, 'text-danger':!isOrdersUp}" >{{ ordersReport.report.ordersSummary.percentageChange}}%
+                                        <i class="fa" ng-class="{'fa-level-up':isOrdersUp, 'fa-level-down':!isOrdersUp}"></i></div>
+
+                                    <div class="progress progress-mini">
+                                        <div style="width: {{ordersReport.report.ordersSummary.percentageChange}}%;" class="progress-bar"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h2 class="no-margins ">{{ ordersReport.report.ordersSummaryLast.orders | number : 0 }}</h2>
+                                    <small>Total Orders last month</small>
+                                    <div class="stat-percent" ng-class="{'text-navy':isOrdersLastUp, 'text-danger':!isOrdersLastUp}" >{{ ordersReport.report.ordersSummaryLast.percentageChange}}%
+                                        <i class="fa" ng-class="{'fa-level-up':isOrdersLastUp, 'fa-level-down':!isOrdersLastUp}"></i></div>
+                                    <div class="progress progress-mini">
+                                        <div style="width: {{ordersReport.report.ordersSummaryLast.percentageChange}}%;" class="progress-bar"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h2 class="no-margins ">$ {{ ordersReport.report.incomeSummary.totalIncome | number : 0 }}</h2>
+                                    <small>Monthly income from orders</small>
+                                    <div class="stat-percent" ng-class="{'text-navy':isIncomeUp, 'text-danger':!isIncomeUp}" >{{ ordersReport.report.incomeSummary.percentageChange}}%
+                                        <i class="fa" ng-class="{'fa-bolt':isIncomeUp, 'fa-level-down':!isIncomeUp}"></i></div>
+                                    <div class="progress progress-mini">
+                                        <div style="width: {{ordersReport.report.incomeSummary.percentageChange}}%;" class="progress-bar"></div>
+                                    </div>
+                                </li>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery and Bootstrap -->
+<script src="js/jquery/jquery-2.1.1.min.js"></script>
+<script src="js/bootstrap/bootstrap.min.js"></script>
+
+<!-- XML JSON -->
+<script src="js/xmljson/xml2json.min.js"></script>
+
+<!-- Flot -->
+<script src="js/plugins/flot/jquery.flot.js"></script>
+<script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+<script src="js/plugins/flot/jquery.flot.spline.js"></script>
+<script src="js/plugins/flot/jquery.flot.resize.js"></script>
+<script src="js/plugins/flot/jquery.flot.pie.js"></script>
+<script src="js/plugins/flot/curvedLines.js"></script>
+
+<!-- Angular scripts-->
+<script src="js/angular/angular.min.js"></script>
+<script src="js/plugins/flot/angular-flot.js"></script>
+
+
+<script src="js/executiveDashboard.js"></script>
+</body>
+</html>
