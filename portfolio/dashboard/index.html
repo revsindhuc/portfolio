@@ -95,7 +95,9 @@
                                         <i class="fa" ng-class="{'fa-level-up':isOrdersUp, 'fa-level-down':!isOrdersUp}"></i></div>
 
                                     <div class="progress progress-mini">
-                                        <div style="width: {{ordersReport.report.ordersSummary.percentageChange}}%;" class="progress-bar"></div>
+                                        <div ng-class="{'progress-bar progress-bar-danger':!isOrdersUp, 'progress-bar':isOrdersUp}"
+                                             style="width: {{(isOrdersUp)?(ordersReport.report.ordersSummary.percentageChange):(-1*ordersReport.report.ordersSummary.percentageChange)}}%;"></div>
+
                                     </div>
                                 </li>
                                 <li>
@@ -104,7 +106,9 @@
                                     <div class="stat-percent" ng-class="{'text-navy':isOrdersLastUp, 'text-danger':!isOrdersLastUp}" >{{ ordersReport.report.ordersSummaryLast.percentageChange}}%
                                         <i class="fa" ng-class="{'fa-level-up':isOrdersLastUp, 'fa-level-down':!isOrdersLastUp}"></i></div>
                                     <div class="progress progress-mini">
-                                        <div style="width: {{ordersReport.report.ordersSummaryLast.percentageChange}}%;" class="progress-bar"></div>
+                                        <div ng-class="{'progress-bar progress-bar-danger':!isOrdersLastUp, 'progress-bar':isOrdersLastUp}"
+                                             style="width: {{(isOrdersLastUp)?(ordersReport.report.ordersSummaryLast.percentageChange):(-1*ordersReport.report.ordersSummaryLast.percentageChange)}}%;"></div>
+
                                     </div>
                                 </li>
                                 <li>
@@ -113,7 +117,7 @@
                                     <div class="stat-percent" ng-class="{'text-navy':isIncomeUp, 'text-danger':!isIncomeUp}" >{{ ordersReport.report.incomeSummary.percentageChange}}%
                                         <i class="fa" ng-class="{'fa-bolt':isIncomeUp, 'fa-level-down':!isIncomeUp}"></i></div>
                                     <div class="progress progress-mini">
-                                        <div style="width: {{ordersReport.report.incomeSummary.percentageChange}}%;" class="progress-bar"></div>
+                                        <div ng-class="{'progress-bar progress-bar-danger':!isIncomeUp, 'progress-bar':isIncomeUp}" style="width: {{(isIncomeUp)?(ordersReport.report.incomeSummary.percentageChange):(-1*ordersReport.report.incomeSummary.percentageChange)}}%;"></div>
                                     </div>
                                 </li>
                         </div>
